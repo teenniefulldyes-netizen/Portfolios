@@ -1,31 +1,25 @@
 import type { Metadata, Viewport } from "next";
 import { Kanit } from "next/font/google";
-import dynamic from 'next/dynamic';
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
+import NavBar from "@/components/NavBar/NavBar";
 import { PerformanceOptimization } from "./performance-optimization";
+import { Suspense, lazy } from "react";
 
-// Dynamically import non-critical components
-const NavBar = dynamic(() => import("@/components/NavBar/NavBar"), {
-  ssr: true,
-  loading: () => <div style={{ height: '64px' }} /> // Prevent layout shift
-});
-
-const OptimizedScripts = dynamic(() => import("@/components/OptimizedScripts"), { ssr: false });
-const StylesheetLoader = dynamic(() => import("@/components/StylesheetLoader"), { ssr: false });
-const AosProvider = dynamic(() => import("./AosProvider"), { ssr: false });
-
-// Optimize font loading
+// Font optimization with reduced weight variants
 const kanit = Kanit({
-  weight: ["300", "400", "500"],
+  weight: ["400", "500"], // ลดจาก 3 weights เหลือ 2
   subsets: ["latin", "thai"],
   display: "swap",
   preload: true,
   fallback: ['system-ui', 'sans-serif'],
-  adjustFontFallback: true, // Prevents layout shift
-  variable: '--font-kanit',
+  variable: '--font-kanit', // ใช้ CSS variable
 });
+
+// Lazy load heavy components
+const OptimizedScripts = lazy(() => import("@/components/OptimizedScripts"));
+const AosProvider = lazy(() => import("./AosProvider"));
 
 export const viewport: Viewport = {
   themeColor: [
@@ -40,42 +34,61 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     default: "Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่",
-    template: "%s Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่",
+    template: "%s | Sirayuth",
   },
   description: "ยินดีต้อนรับสู่พอร์ตโฟลิโอของ Sirayuth - นักพัฒนาและนักออกแบบที่มีความเชี่ยวชาญในการสร้างประสบการณ์ดิจิทัลที่สวยงาม ตอบโจทย์ และใช้งานง่าย ด้วยเทคโนโลยีล่าสุด",
   keywords: ["Next.js", "Tailwind", "React", "Web App", "Sirayuth", "Sirayuth Naensing", "Siraxuth", "Devoxia"],
   authors: [{ name: "Sirayuth", url: "https://siraxuth.xyz" }],
   creator: "Sirayuth Naensing",
-
+  
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
+    ],
+    apple: "/apple-touch-icon.png",
     shortcut: "/favicon.ico",
   },
-
+  
   openGraph: {
     title: "Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่",
     description: "ยินดีต้อนรับสู่พอร์ตโฟลิโอของ Sirayuth - นักพัฒนาและนักออกแบบที่มีความเชี่ยวชาญในการสร้างประสบการณ์ดิจิทัลที่สวยงาม ตอบโจทย์ และใช้งานง่าย ด้วยเทคโนโลยีล่าสุด",
     url: "https://siraxuth.xyz",
-    siteName: "Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่",
+    siteName: "Sirayuth Portfolio",
     images: [
       {
-        url: "https://siraxuth.xyz/devoxai.png",
-        alt: "Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่ Preview",
+        url: "https://siraxuth.xyz/og-image.webp", // เปลี่ยนเป็น WebP
+        width: 1200,
+        height: 630,
+        alt: "Sirayuth Portfolio Preview",
       },
     ],
     locale: "th_TH",
     type: "website",
   },
-
+  
   twitter: {
     card: "summary_large_image",
     title: "Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่",
-    description: "ยินดีต้อนรับสู่พอร์ตโฟลิโอของ Sirayuth - นักพัฒนาและนักออกแบบที่มีความเชี่ยวชาญในการสร้างประสบการณ์ดิจิทัลที่สวยงาม ตอบโจทย์ และใช้งานง่าย ด้วยเทคโนโลยีล่าสุด",
+    description: "ยินดีต้อนรับสู่พอร์ตโฟลิโอของ Sirayuth",
     creator: "@siraxuth",
-    images: ["https://siraxuth.xyz/devoxai.png"],
+    images: ["https://siraxuth.xyz/og-image.webp"],
   },
-
+  
   metadataBase: new URL("https://siraxuth.xyz"),
+  
+  // เพิ่ม robots และ verification
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -86,7 +99,7 @@ export default function RootLayout({
   return (
     <html lang="th" suppressHydrationWarning>
       <head>
-        {/* Resource hints for critical resources */}
+        {/* Preconnect to external domains */}
         <link 
           rel="preconnect" 
           href="https://cdn.jsdelivr.net" 
@@ -94,48 +107,75 @@ export default function RootLayout({
         />
         <link 
           rel="dns-prefetch" 
-          href="https://cdn.jsdelivr.net"
+          href="https://cdn.jsdelivr.net" 
         />
         
-        {/* Preload critical images */}
+        {/* Critical resource preloads */}
         <link
           rel="preload"
-          href="/devoxia_2.png"
+          href="/devoxia_2.webp"
           as="image"
-          type="image/png"
+          type="image/webp"
           fetchPriority="high"
-          imageSizes="700px"
         />
-
-        {/* Add resource hints for fonts */}
+        
+        {/* Inline critical CSS for above-the-fold content */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical above-the-fold styles */
+            body { font-family: var(--font-kanit), system-ui, sans-serif; }
+            .loading-skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
+            @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+          `
+        }} />
+        
+        {/* Preload important fonts */}
         <link
           rel="preload"
-          href={kanit.url}
+          href="https://fonts.gstatic.com/s/kanit/v15/nKKZ-Go6G5tXcoaSEQGodLxA.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${kanit.variable} font-sans antialiased`}>
+      
+      <body className={`${kanit.className} ${kanit.variable} antialiased`}>
         <ThemeProvider 
           attribute="class" 
           defaultTheme="system" 
           enableSystem 
           disableTransitionOnChange
         >
-          <AosProvider>
-            <PerformanceOptimization />
-            <OptimizedScripts />
-            <StylesheetLoader />
-            <NavBar />
-            <main className="relative">
-              <ScrollProgress/>
+          {/* Performance monitoring component */}
+          <PerformanceOptimization />
+          
+          {/* Critical above-the-fold components */}
+          <NavBar />
+          
+          {/* Main content with loading boundary */}
+          <main>
+            <ScrollProgress />
+            <Suspense fallback={
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="loading-skeleton w-full h-96 rounded-lg mx-4" />
+              </div>
+            }>
               {children}
-            </main>
-          </AosProvider>
+            </Suspense>
+          </main>
+          
+          {/* Lazy load non-critical components */}
+          <Suspense fallback={null}>
+            <AosProvider>
+              <div /> {/* AOS จะ wrap ใน component ลูก */}
+            </AosProvider>
+          </Suspense>
+          
+          <Suspense fallback={null}>
+            <OptimizedScripts />
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
   );
 }
-
