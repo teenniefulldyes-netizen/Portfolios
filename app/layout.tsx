@@ -1,31 +1,30 @@
 import type { Metadata, Viewport } from "next";
 import { Kanit } from "next/font/google";
-import { motion } from "framer-motion";
+import dynamic from 'next/dynamic';
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
-import NavBar from "@/components/NavBar/NavBar";
 import { PerformanceOptimization } from "./performance-optimization";
-import OptimizedScripts from "@/components/OptimizedScripts";
-import StylesheetLoader from "@/components/StylesheetLoader";
-import AosProvider from "./AosProvider";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+// Dynamically import non-critical components
+const NavBar = dynamic(() => import("@/components/NavBar/NavBar"), {
+  ssr: true,
+  loading: () => <div style={{ height: '64px' }} /> // Prevent layout shift
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const OptimizedScripts = dynamic(() => import("@/components/OptimizedScripts"), { ssr: false });
+const StylesheetLoader = dynamic(() => import("@/components/StylesheetLoader"), { ssr: false });
+const AosProvider = dynamic(() => import("./AosProvider"), { ssr: false });
 
+// Optimize font loading
 const kanit = Kanit({
   weight: ["300", "400", "500"],
   subsets: ["latin", "thai"],
   display: "swap",
   preload: true,
   fallback: ['system-ui', 'sans-serif'],
+  adjustFontFallback: true, // Prevents layout shift
+  variable: '--font-kanit',
 });
 
 export const viewport: Viewport = {
@@ -87,11 +86,18 @@ export default function RootLayout({
   return (
     <html lang="th" suppressHydrationWarning>
       <head>
+        {/* Resource hints for critical resources */}
         <link 
           rel="preconnect" 
           href="https://cdn.jsdelivr.net" 
           crossOrigin="anonymous" 
         />
+        <link 
+          rel="dns-prefetch" 
+          href="https://cdn.jsdelivr.net"
+        />
+        
+        {/* Preload critical images */}
         <link
           rel="preload"
           href="/devoxia_2.png"
@@ -100,21 +106,32 @@ export default function RootLayout({
           fetchPriority="high"
           imageSizes="700px"
         />
-      </head>
-      <body
-        className={`${kanit.className} antialiased`}
-      >
-        <ThemeProvider attribute={"class"} defaultTheme="system" enableSystem disableTransitionOnChange>
-          <AosProvider>
 
-          <PerformanceOptimization />
-          <OptimizedScripts />
-          <StylesheetLoader />
-          <NavBar />
-          <main>
-            <ScrollProgress/>
-            {children}
-          </main>
+        {/* Add resource hints for fonts */}
+        <link
+          rel="preload"
+          href={kanit.url}
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body className={`${kanit.variable} font-sans antialiased`}>
+        <ThemeProvider 
+          attribute="class" 
+          defaultTheme="system" 
+          enableSystem 
+          disableTransitionOnChange
+        >
+          <AosProvider>
+            <PerformanceOptimization />
+            <OptimizedScripts />
+            <StylesheetLoader />
+            <NavBar />
+            <main className="relative">
+              <ScrollProgress/>
+              {children}
+            </main>
           </AosProvider>
         </ThemeProvider>
       </body>
