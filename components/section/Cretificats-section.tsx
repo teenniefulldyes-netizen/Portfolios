@@ -73,6 +73,17 @@ export function CertificatesSection() {
       imageUrl: "/ผลงาน3.jpg", // Replace with actual path
       color: "from-purple-500 to-indigo-500",
     },
+    {
+      date: "15 Aug 2025",
+      title: "รางวัลรองชนะเลิศอันดับที่ 1",
+      organization: "Frontend Masters",
+      description: `การแข่งขันหุ่นยนต์กู้ภัยระดับกลางอัตโนมัติที่มหาวิทยาลัยราชภัฏอุบลราชธานี`,
+      skills: ["POP32", "Arduino", "C++"],
+      credentialId: "AR-2023-78259",
+      credentialURL: "#",
+      imageUrl: "/ผลงาน4.jpg", // Replace with actual path
+      color: "from-purple-500 to-indigo-500",
+    },
   ];
 
   return (
@@ -154,7 +165,8 @@ export function CertificatesSection() {
                         {/* Timeline content */}
                         <div className={`w-1/2 px-6 ${index % 2 === 0 ? "text-right" : "text-left"}`}>
                           <span className="text-sm font-semibold text-purple-500">{cert.date}</span>
-                          <h4 className="text-lg md:text-xl font-bold mt-1 whitespace-nowrap max-w-full ">{cert.title}</h4>
+                          {/* <h4 className="text-lg md:text-xl font-bold mt-1 whitespace-nowrap max-w-full ">{cert.title}</h4> */}
+                          <h4 className="text-lg md:text-xl font-bold mt-1  max-w-full ">{cert.title}</h4>
                           {/* <p className="text-blue-500">{cert.organization}</p> */}
                           <p className="text-muted-foreground mt-2 break-words max-w-full">{cert.description}</p>
                           
