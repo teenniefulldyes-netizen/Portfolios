@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 import NavBar from "@/components/NavBar/NavBar";
 import { PerformanceOptimization } from "./performance-optimization";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Suspense, lazy } from "react";
 
 // Font optimization with reduced weight variants
@@ -146,6 +147,7 @@ export default function RootLayout({
           enableSystem 
           disableTransitionOnChange
         >
+          <SpeedInsights />
           {/* Performance monitoring component */}
           <PerformanceOptimization />
           
