@@ -8,17 +8,16 @@ import { PerformanceOptimization } from "./performance-optimization";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Suspense, lazy } from "react";
 
-// Font optimization with reduced weight variants
+
 const kanit = Kanit({
-  weight: ["400", "500"], // ลดจาก 3 weights เหลือ 2
+  weight: ["400", "500"], 
   subsets: ["latin", "thai"],
   display: "swap",
   preload: true,
   fallback: ['system-ui', 'sans-serif'],
-  variable: '--font-kanit', // ใช้ CSS variable
+  variable: '--font-kanit', 
 });
 
-// Lazy load heavy components
 const OptimizedScripts = lazy(() => import("@/components/OptimizedScripts"));
 const AosProvider = lazy(() => import("./AosProvider"));
 
@@ -34,13 +33,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่",
-    template: "%s | Sirayuth",
+    default: "Portfolio | Teennie AI engineering",
+    template: "%s | teenie",
   },
-  description: "ยินดีต้อนรับสู่พอร์ตโฟลิโอของ Sirayuth - นักพัฒนาและนักออกแบบที่มีความเชี่ยวชาญในการสร้างประสบการณ์ดิจิทัลที่สวยงาม ตอบโจทย์ และใช้งานง่าย ด้วยเทคโนโลยีล่าสุด",
-  keywords: ["Next.js", "Tailwind", "React", "Web App", "Sirayuth", "Sirayuth Naensing", "Siraxuth", "Devoxia"],
-  authors: [{ name: "Sirayuth", url: "https://siraxuth.xyz" }],
-  creator: "Sirayuth Naensing",
+  description: "ตั้งเอาเองง้าบบ",
+  keywords: ["Next.js", "Tailwind", "React", "Web App", "Sirxyuth",  "Devoxia"],
+  authors: [{ name: "Thumthakorn Wanghamklang", url: "https://domain.com" }],
+  creator: "Thumthakorn Wanghamklang",
   
   icons: {
     icon: [
@@ -52,16 +51,16 @@ export const metadata: Metadata = {
   },
   
   openGraph: {
-    title: "Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่",
-    description: "ยินดีต้อนรับสู่พอร์ตโฟลิโอของ Sirayuth - นักพัฒนาและนักออกแบบที่มีความเชี่ยวชาญในการสร้างประสบการณ์ดิจิทัลที่สวยงาม ตอบโจทย์ และใช้งานง่าย ด้วยเทคโนโลยีล่าสุด",
-    url: "https://siraxuth.xyz",
-    siteName: "Sirayuth Portfolio",
+    title: "Portfolio | Teennie AI engineering",
+    description: "ตั้งเอาเองน้าา",
+    url: "https://domain.com",
+    siteName: "thumthakorn Portfolio",
     images: [
       {
-        url: "https://siraxuth.xyz/og-image.webp", // เปลี่ยนเป็น WebP
+        url: "https://domain.com/image", // เปลี่ยนเป็น WebP
         width: 1200,
         height: 630,
-        alt: "Sirayuth Portfolio Preview",
+        alt: "Thumthakorn Portfolio Preview",
       },
     ],
     locale: "th_TH",
@@ -70,13 +69,13 @@ export const metadata: Metadata = {
   
   twitter: {
     card: "summary_large_image",
-    title: "Sirayuth | นักพัฒนาเว็บและนักศึกษารุ่นใหม่",
-    description: "ยินดีต้อนรับสู่พอร์ตโฟลิโอของ Sirayuth",
-    creator: "@siraxuth",
-    images: ["https://siraxuth.xyz/og-image.webp"],
+    title: "Portfolio | Teennie AI engineering",
+    description: "ยินดีต้อนรับสู่พอร์ตโฟลิโอของ Thumthakorn",
+    creator: "@thumthakorn",
+    images: ["https://domain.com/image-url"],
   },
   
-  metadataBase: new URL("https://siraxuth.xyz"),
+  metadataBase: new URL("https://domain.com"),
   
   // เพิ่ม robots และ verification
   robots: {
@@ -112,13 +111,7 @@ export default function RootLayout({
         />
         
         {/* Critical resource preloads */}
-        <link
-          rel="preload"
-          href="/devoxia_2.webp"
-          as="image"
-          type="image/webp"
-          fetchPriority="high"
-        />
+
         
         {/* Inline critical CSS for above-the-fold content */}
         <style dangerouslySetInnerHTML={{
@@ -143,7 +136,7 @@ export default function RootLayout({
       <body className={`${kanit.className} ${kanit.variable} antialiased`}>
         <ThemeProvider 
           attribute="class" 
-          defaultTheme="system" 
+          defaultTheme="dark" 
           enableSystem 
           disableTransitionOnChange
         >

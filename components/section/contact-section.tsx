@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView, easeOut } from "framer-motion";
-import { Facebook, Instagram, Github, Mail, Linkedin, Twitter, ExternalLink, Heart } from "lucide-react";
+import { Facebook, Instagram, Github, Mail, Linkedin, Twitter, ExternalLink, Heart, YoutubeIcon } from "lucide-react";
 import Link from "next/link";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import {
@@ -56,33 +56,34 @@ export function ContactSection() {
     {
       name: "Facebook",
       icon: Facebook,
-      url: "https://www.facebook.com/sirayuth.zx/",
+      url: "https://www.facebook.com/reijidayo?locale=th_TH",
       color: "from-blue-600 to-blue-400",
     },
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://www.instagram.com/dev.siraxuth.xyz/",
+      url: "https://www.instagram.com/rosine._.rei/",
       color: "from-pink-600 to-purple-400",
     },
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/x2Stiftz/",
+      url: "https://github.com/Xexatoth",
       color: "from-gray-800 to-gray-600",
     },
     {
       name: "Discord",
       icon: DiscordIcon,
-      url: "https://discord.com/users/869507619553968158",
+      url: "https://discord.gg/gHnk5gJ9",
       color: "from-blue-700 to-blue-500",
     },
     {
-      name: "Discord Server",
-      icon: DiscordIcon,
-      url: "https://discord.gg/reqvestz",
+      name: "YouTube",
+      icon: YoutubeIcon,
+      url: "https://www.youtube.com/@Reijiwatatsuki",
       color: "from-blue-700 to-blue-500",
     },
+
   ];
 
   return (
@@ -198,11 +199,11 @@ export function ContactSection() {
               >
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-xl blur-md"></div>
                 <a 
-                  href="mailto:siraxuth@gmail.com" 
+                  href="mailto:teenniefulldyes@gmail.com" 
                   className="relative flex items-center justify-center gap-3 py-4 px-6 bg-background/80 backdrop-blur-sm border border-muted/30 rounded-lg hover:bg-white/10 transition-colors"
                 >
                   <Mail className="w-5 h-5 text-blue-500" />
-                  <span className="text-lg font-medium">siraxuth@gmail.com</span>
+                  <span className="text-lg font-medium">teenniefulldyes@gmail.com</span>
                   <ExternalLink className="w-4 h-4 ml-1 opacity-70" />
                 </a>
               </motion.div>

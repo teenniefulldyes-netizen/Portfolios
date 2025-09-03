@@ -23,7 +23,7 @@ const navItems = [
   { name: "Home", href: "#home", nameTH: "หน้าแรก" },
   { name: "About", href: "#about", nameTH: "เกี่ยวกับ" },
   { name: "Skills", href: "#skills", nameTH: "ทักษะ" },
-  { name: "Projects", href: "#projects", nameTH: "ผลงานโปรเจค" },
+  { name: "Performance", href: "#projects", nameTH: "ผลงาน" },
   { name: "Certificates", href: "#certificates", nameTH: "ผลงานรางวัล" },
   { name: "Contact", href: "#contact", nameTH: "ติดต่อ" },
 ];
@@ -145,7 +145,7 @@ const NavBar = () => {
             <span className={cn(
               "font-semibold transition-all duration-500",
               isHeroSection ? "text-xl" : "text-lg"
-            )}>x2Stiftz</span>
+            )}>PORTFOLIO</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -172,7 +172,7 @@ const NavBar = () => {
 
           {/* Right Side Controls */}
           <div className="flex items-center gap-2">
-            <DarkModeToggle />
+            {/* <DarkModeToggle /> */}
             
             {/* Mobile Menu */}
             <div className="md:hidden">

@@ -41,49 +41,116 @@ export function CertificatesSection() {
   // Certificate Data
   const certificates = [
     {
-      date: "22 January 2025",
+      date: "21 - 22 August 2025",
       title: "รางวัลระดับเหรียญทอง",
-      organization: "Meta",
-      description: "การแข่งขันหุ่นยนต์กู้ภัยระดับกลาง มหาวิทยาลัยนครพนม",
-      skills: ["c", "c++", "Arduino"],
-      credentialId: "FSW-2023-00142",
-      credentialURL: "#",
-      imageUrl: "/ผลงาน1.png", // Replace with actual path
+      // organization: "Meta",
+      description: "Participated in the United Nations Conference Centre, Bankok, from ",
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "FSW-2023-00142",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_01.jpg", // Replace with actual path
       color: "from-blue-500 to-cyan-400",
     },
     {
-      date: "31 January 2025",
-      title: "รางวัลรองชนะเลิศอันดับที่ 4",
-      organization: "Frontend Masters",
-      description: `การแข่งขันหุ่นยนต์อัตโนมัติขนส่งผู้โดยสาร "Tracsporter Robot" โรงเรียนวารินชำราบ`,
-      skills: ["c", "c++", "Arduino"],
-      credentialId: "AR-2023-78259",
-      credentialURL: "#",
-      imageUrl: "/ผลงาน2.jpg", // Replace with actual path
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `Participated in a series of Samsung Solve for Tomorrow 2025`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_02.jpg", // Replace with actual path
       color: "from-purple-500 to-indigo-500",
     },
     {
-      date: "19 July 2025",
-      title: "รางวัลรองชนะเลิศอันดับที่ 2",
-      organization: "Frontend Masters",
-      description: `การแข่งขันเขียนโปรแกรม turtle python รุ่น junior ที่โรงเรียนกมลาไสย`,
-      skills: ["Python", "Turtle", "Thonny"],
-      credentialId: "AR-2023-78259",
-      credentialURL: "#",
-      imageUrl: "/ผลงาน3.jpg", // Replace with actual path
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `Participating in Business Communication Course By City College Plymouth, UK`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_03.jpg", // Replace with actual path
       color: "from-purple-500 to-indigo-500",
     },
     {
-      date: "15 Aug 2025",
-      title: "รางวัลรองชนะเลิศอันดับที่ 1",
-      organization: "Frontend Masters",
-      description: `การแข่งขันหุ่นยนต์กู้ภัยระดับกลางอัตโนมัติที่มหาวิทยาลัยราชภัฏอุบลราชธานี`,
-      skills: ["POP32", "Arduino", "C++"],
-      credentialId: "AR-2023-78259",
-      credentialURL: "#",
-      imageUrl: "/ผลงาน4.jpg", // Replace with actual path
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `Participated and completing in leagues of code`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_04.jpg", // Replace with actual path
       color: "from-purple-500 to-indigo-500",
     },
+    {
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `Completed an intensive Japanese language and culture program at the Kyoto Institute of Culture and Language (KICL). The program emphasized practical communication skills, cultural immersion, and academic study of Japanese language`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_05.jpg", // Replace with actual path
+      color: "from-purple-500 to-indigo-500",
+    },
+    {
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `Certificated from AICE warp program organized by CMKL University`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_06.jpg", // Replace with actual path
+      color: "from-purple-500 to-indigo-500",
+    },
+    {
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `Certificated IT TNI CAMP#16 from Thai nichi`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_07.jpg", // Replace with actual path
+      color: "from-purple-500 to-indigo-500",
+    },
+    {
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `Certificate from SUT Science Camp`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_08.jpg", // Replace with actual path
+      color: "from-purple-500 to-indigo-500",
+    },
+    {
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `Myself lerning from coddytech`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_09.jpg", // Replace with actual path
+      color: "from-purple-500 to-indigo-500",
+    },
+    {
+      date: "2025",
+      // title: "รางวัลรองชนะเลิศอันดับที่ 4",
+      // organization: "Frontend Masters",
+      description: `GPA`,
+      // skills: ["c", "c++", "Arduino"],
+      // credentialId: "AR-2023-78259",
+      // credentialURL: "#",
+      imageUrl: "/certificate/certificate_10.jpg", // Replace with actual path
+      color: "from-purple-500 to-indigo-500",
+    },
+
   ];
 
   return (
@@ -127,8 +194,8 @@ export function CertificatesSection() {
               >
                 <div className="relative inline-block">
                   <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-400/20 blur-xl opacity-70"></div>
-                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 whitespace-nowrap max-w-full overflow-x-auto">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-600">
+                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 whitespace-nowrap max-w-full ovserflow-x-hidden ">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-600 overflow-y-hidden">
                       Certificates & Achievements
                     </span>
                   </h2>
@@ -166,18 +233,18 @@ export function CertificatesSection() {
                         <div className={`w-1/2 px-6 ${index % 2 === 0 ? "text-right" : "text-left"}`}>
                           <span className="text-sm font-semibold text-purple-500">{cert.date}</span>
                           {/* <h4 className="text-lg md:text-xl font-bold mt-1 whitespace-nowrap max-w-full ">{cert.title}</h4> */}
-                          <h4 className="text-lg md:text-xl font-bold mt-1  max-w-full ">{cert.title}</h4>
+                          {/* <h4 className="text-lg md:text-xl font-bold mt-1  max-w-full ">{cert.title}</h4> */}
                           {/* <p className="text-blue-500">{cert.organization}</p> */}
                           <p className="text-muted-foreground mt-2 break-words max-w-full">{cert.description}</p>
                           
                           {/* Skills Tags */}
-                          <div className={`mt-4 flex flex-wrap gap-2 ${index % 2 === 0 ? "justify-end" : "justify-start"}`}>
+                          {/* <div className={`mt-4 flex flex-wrap gap-2 ${index % 2 === 0 ? "justify-end" : "justify-start"}`}>
                             {cert.skills.map((skill, i) => (
                               <Badge key={i} variant="outline" className="bg-background/50 border-muted/30 whitespace-nowrap">
                                 {skill}
                               </Badge>
                             ))}
-                          </div>
+                          </div> */}
                           
                           {/* Certificate Links */}
                           <div className={`mt-4 flex ${index % 2 === 0 ? "justify-end" : "justify-start"} space-x-4`}>
@@ -197,7 +264,7 @@ export function CertificatesSection() {
                                   />
                                 </div>
                                 <div className="mt-4">
-                                  <h3 className="text-lg font-semibold">{cert.title}</h3>
+                                  {/* <h3 className="text-lg font-semibold">{cert.title}</h3> */}
                                   <p className="text-sm font-semibold">{cert.description}</p>
                                   {/* <p className="text-blue-500">{cert.organization}</p> */}
                                   {/* <p className="text-sm text-muted-foreground mt-1">Credential ID: {cert.credentialId}</p> */}

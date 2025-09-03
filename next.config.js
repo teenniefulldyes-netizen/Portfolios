@@ -11,21 +11,23 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.lukhamhan.siraxuth.xyz',
+        hostname: '**', // อนุญาตทุกโดเมน
+      },
+      {
+        protocol: 'http',
+        hostname: '**', // เผื่อใช้ HTTP ด้วย
       },
     ],
   },
   experimental: {
-    // Explicitly disable CSS optimization as it's causing build issues
     optimizeCss: false,
     scrollRestoration: true,
     optimizePackageImports: ['framer-motion'],
   },
   reactStrictMode: true,
-  // Next.js 15 uses swc by default and doesn't need swcMinify option
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;

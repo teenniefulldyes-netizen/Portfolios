@@ -377,7 +377,7 @@ export function Hero() {
           </div>
         <Aurora
             className="absolute inset-0 -z-10 pointer-events-none h-[60vh]"
-            colorStops={["#3A29FF", "#94ff99", "#FF3232"]}
+            colorStops={["#7B00FF", "#94ff99", "#0900FF"]}
             blend={1.0}
             amplitude={1.0}
             speed={0.5}
@@ -457,7 +457,7 @@ export function Hero() {
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   style={{ backgroundSize: "200% 200%" }}
                 >
-                  Siraxuth
+                  Thumthakorn
                 </motion.div>
                 <motion.div 
                   className={cn("text-white/90 text-center w-full", 
@@ -470,9 +470,10 @@ export function Hero() {
                   {mounted && (
                     <TypeAnimation
                       sequence={[
-                        'Developer', 3000,
-                        'Student', 3000,
-                        'Problem Solver', 3000,
+                        'Ai engineering', 3000,
+                        'Business Ai', 3000,
+                        
+                        // 'Problem Solver', 3000,
                       ]}
                       wrapper="span"
                       className="text-gray-800 dark:text-white"
@@ -493,7 +494,7 @@ export function Hero() {
                 getSubtitleSize
               )}
             >
-              <TypedTextContainer deviceInfo={deviceInfo}>
+              {/* <TypedTextContainer deviceInfo={deviceInfo}>
                 {mounted && (
                   <TypeAnimation
                     sequence={deviceInfo.isSmallMobile ? [
@@ -515,9 +516,11 @@ export function Hero() {
                     className="inline-block font-medium text-center text-gray-800 dark:text-white"
                   />
                 )}
-              </TypedTextContainer>
+              </TypedTextContainer> */}
+              <p>
+                "Not everyone who makes an effort is rewarded. Howerver! Everyone who has succeeded has undoubtedly made an effort!!!
+              </p>
             </motion.div>
-
             <motion.div
               variants={itemVariants}
               className={cn("flex flex-row gap-4 w-full justify-center", 
@@ -558,12 +561,12 @@ export function Hero() {
               <div className="floating-image">
                 <div className="image-card">
                   <OptimizedImage
-                    src="/FB_IMG_1741628963458.jpg"
-                    alt="Siraxuth Profile"
+                    src="/profile_hero.jpg"
+                    alt="Profile"
                     width={800}
                     height={800}
                     isLCP={true}
-                    className="relative z-10 w-full max-w-md drop-shadow-2xl rounded-2xl"
+                    className="relative z-10 w-full max-w-xs drop-shadow-2xl rounded-2xl"
                     priority
                   />
                 </div>

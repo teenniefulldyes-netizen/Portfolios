@@ -56,7 +56,7 @@ export default function OptimizedImage({
   
   // Different sizes for responsive design
   const responsiveSizes = isLCP 
-    ? "(max-width: 400px) 80vw, (max-width: 768px) 90vw, 700px"
+    ? "(max-width: 400px) 80vw, (max-width: 768px) 90vw, 3700px"
     : "(max-width: 400px) 80vw, (max-width: 768px) 90vw, (max-width: 1200px) 50vw, 33vw";
   
   // LCP images should always use these settings for best performance

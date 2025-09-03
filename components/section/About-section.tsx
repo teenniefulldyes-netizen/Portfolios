@@ -87,25 +87,37 @@ export function AboutSection() {
   // Memoized timeline data
   const timelineData = useMemo(() => [
     {
-      year: "2018 - 2023",
-      title: "การศึกษาระบบประถมศึกษา",
-      company: "โรงเรียนบ้านท่าช้าง\n(เขตการทางนครราชสีมาสงเคราะห์2)",
-      link: "https://www.facebook.com/p/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%AA%E0%B8%B5%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B8%87%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C2-100083231655789/"
+      year: "2553 - 2561",
+      title: "KINDERGARTEN - PRIMARY",
+      company: "SARASASNAKHONRATCHASIMA",
+      link: "#"
     },
     {
-      year: "2024 - Present",
-      title: "การศึกษามัธยมศึกษาตอนต้น",
-      company: "โรงเรียนลือคำหาญวารินชำราบ",
-      link: "http://www.lukhamhan.ac.th/new/"
+      year: "2565 - 2569",
+      title: "SECONDARY",
+      company: "ASSUMPTION NAKHONRATCHASIMA",
+      link: "#"
     },
   ], []);
 
   const skillsList = useMemo(() => [
-    "Frontend Development with React & Next.js",
-    "Responsive UI Design with Tailwind CSS",
-    "Interactive Animations & Transitions",
-    "Bot Discord & Robotics",
-    "Performance Optimization"
+  "Communication",
+  "Teamwork",
+  "Leadership & management", 
+  "Critical thinking", 
+  "Creativity", 
+  "Adaptability", 
+  "Emotional intelligence", 
+  "Hybrid working"
+  ], []);
+  const HobbyList = useMemo(() => [
+  "Chess",
+  "practice coding skills",
+  "Find and learn things I don’t know",
+  "Disassemble stuff that I don’t use",
+  "Sports and body weight training",
+  "Drawing"
+
   ], []);
 
   return (
@@ -177,7 +189,7 @@ export function AboutSection() {
                     <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-blue-600/30 md:from-blue-600/50 to-blue-600/15 md:to-blue-600/20 opacity-70 blur group-hover:opacity-100 transition duration-500 md:duration-1000"></div>
                     <div className="relative">
                       <img
-                        src="/FB_IMG_1741628950443.jpg"
+                        src="/about_profile.jpg"
                         alt="Developer Profile"
                         className="rounded-lg w-full object-cover aspect-[4/3] bg-gray-800 group-hover:scale-[1.005] md:group-hover:scale-[1.01] transition duration-300 md:duration-500"
                         loading="lazy" // Add lazy loading for better performance
@@ -203,8 +215,8 @@ export function AboutSection() {
                   {/* Quick stats - Optimized grid */}
                   <div className="grid grid-cols-2 gap-3 md:gap-4 mt-6 md:mt-8">
                     <Card className="bg-background/70 backdrop-blur-sm p-3 md:p-4 rounded-lg border border-purple-500/10">
-                      <p className="text-xs md:text-sm text-muted-foreground mb-1">มีชีวิตมาแล้ว</p>
-                      <TypingAnimation className="text-lg md:text-2xl font-semibold">{ageText}</TypingAnimation>
+                      <p className="text-xs md:text-sm text-muted-foreground mb-1">Name:</p>
+                      <TypingAnimation className="text-xs font-semibold">Thumthakorn Wanghamklang</TypingAnimation>
                       {!shouldReduceMotion && (
                         <>
                           <BorderBeam
@@ -222,8 +234,8 @@ export function AboutSection() {
                       )}
                     </Card>
                     <Card className="bg-background/70 backdrop-blur-sm p-3 md:p-4 rounded-lg border border-blue-500/10">
-                      <p className="text-xs md:text-sm text-muted-foreground mb-1">เกิดเมื่อวันที่</p>
-                      <p className="text-lg md:text-2xl font-bold">01/10/2554</p>
+                      <p className="text-xs md:text-sm text-muted-foreground mb-1">Age:</p>
+                      <p className="text-lg md:text-2xl font-bold">17 years old</p>
                       {!shouldReduceMotion && (
                         <>
                           <BorderBeam
@@ -241,8 +253,9 @@ export function AboutSection() {
                       )}
                     </Card>
                     <Card className="bg-background/70 backdrop-blur-sm p-3 md:p-4 rounded-lg border border-blue-500/10">
-                      <p className="text-xs md:text-sm text-muted-foreground mb-1">สถานะ</p>
-                      <Link href="https://www.instagram.com/apsr._.10?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-lg md:text-2xl flex gap-2 font-bold text-blue-500"><Instagram className="top-2" />มีแฟนแล้ว</Link>
+                      <p className="text-xs md:text-sm text-muted-foreground mb-1">Birthday:</p>
+                      <p className="text-lg md:text-xl font-bold">20 September 2007</p>
+                      {/* <Link href="https://www.instagram.com/apsr._.10?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-lg md:text-2xl flex gap-2 font-bold text-blue-500"><Instagram className="top-2" />มีแฟนแล้ว</Link> */}
                       {!shouldReduceMotion && (
                         <>
                           <BorderBeam
@@ -260,8 +273,11 @@ export function AboutSection() {
                       )}
                     </Card>
                     <Card className="bg-background/70 backdrop-blur-sm p-3 md:p-4 rounded-lg border border-purple-500/10">
-                      <p className="text-xs md:text-sm text-muted-foreground mb-1">Coffee</p>
-                      <p className="text-lg md:text-2xl font-bold">∞</p>
+                      <p className="text-xs md:text-sm text-muted-foreground mb-1">computer skills:</p>
+                      <p className="text-xs font-bold">Video & Audio Editing
+Web Development
+Basic Graphic Tools
+Email & Communication Tools</p>
                       {!shouldReduceMotion && (
                         <>
                           <BorderBeam
@@ -288,29 +304,33 @@ export function AboutSection() {
                   <h3 className="text-xl md:text-2xl font-bold">Who am I?</h3>
                   <div className="space-y-3 md:space-y-4 text-sm md:text-base">
                     <p className="text-muted-foreground">
-                      สวัสดีครับ ผมชื่อจริงว่า <strong className="font-bold">ศิรายุทธ แน่นสิงห์</strong> ชื่อเล่นว่า <strong className="font-bold">ตั้น</strong> ปัจจุบันอายุ 13 ปี และกำลังเดินตามความฝันที่จะเป็น <strong className="font-bold">Fullstack Developer</strong> ในอนาคต
-                    </p>
-                    <p className="text-muted-foreground">
-                      แม้จะยังเป็นมือใหม่ในการเขียนโปรแกรม แต่ผมมีความตั้งใจอย่างแรงกล้าในการเรียนรู้เทคโนโลยีใหม่ ๆ ทั้งในฝั่ง Frontend และ Backend ผมชื่นชอบการออกแบบที่เรียบง่าย ไม่ซับซ้อน แต่ใช้งานได้จริง เพราะเชื่อว่าความเรียบง่ายคือหัวใจสำคัญของประสบการณ์ผู้ใช้ที่ดี
-                    </p>
-                    <p className="text-muted-foreground">
-                      ผมเริ่มต้นเรียนรู้พื้นฐานจาก HTML, CSS, JavaScript และค่อย ๆ ต่อยอดไปยังภาษาและเฟรมเวิร์กอื่น ๆ ด้วยความอยากรู้อยากเห็นและความสนุกกับการสร้างสิ่งใหม่ ๆ ที่จับต้องได้
-                    </p>
-                    <p className="text-muted-foreground">
-                      แม้เส้นทางนี้จะยังอีกยาวไกล แต่ผมพร้อมจะเรียนรู้ พัฒนา และเติบโตไปในสายอาชีพนี้อย่างเต็มที่ครับ
+                      I come from a large family of nine siblings, and since the age of fifteen I have supported myself financially while my father, who carries many responsibilities, continues to cover only my school tuition. To pursue independence, I co-founded a startup with a team of around 260 people, an experience that taught me resilience, patience, and leadership through many trials and setbacks. My goal in joining CMKL University is to develop the knowledge and network needed to build a strong team capable of launching impactful large-scale businesses. Given my family’s financial situation, I would be deeply grateful for a scholarship that would allow me to fully dedicate myself to my studies and contribute actively to the CMKL community.
                     </p>
                   </div>
 
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-base md:text-lg">What I Do:</h4>
-                    <ul className="space-y-2">
-                      {skillsList.map((item, index) => (
-                        <li key={index} className="flex items-start text-sm md:text-base">
-                          <span className="mr-2 text-blue-500 mt-0.5 flex-shrink-0">✓</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="space-y-3 flex space-x-4">
+                    <div>
+                      <h4 className="font-semibold text-base md:text-lg">soft skills:</h4>
+                      <ul className="space-y-2">
+                        {skillsList.map((item, index) => (
+                          <li key={index} className="flex items-start text-sm md:text-base">
+                            <span className="mr-2 text-blue-500 mt-0.5 flex-shrink-0">✓</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-base md:text-lg">Hobby:</h4>
+                      <ul className="space-y-2">
+                        {HobbyList.map((item, index) => (
+                          <li key={index} className="flex items-start text-sm md:text-base">
+                            <span className="mr-2 text-blue-500 mt-0.5 flex-shrink-0">✓</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4">
@@ -327,7 +347,7 @@ export function AboutSection() {
                 className="mt-16 md:mt-32"
               >
                 <h3 className="text-xl md:text-3xl font-semibold text-center mb-8 md:mb-10">
-                  การศึกษา
+                  Education
                 </h3>
 
                 <div className="relative" data-aos="fade-up">

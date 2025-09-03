@@ -1,19 +1,33 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60 * 60 * 24, // 24 hours cache for better performance
+    deviceSizes: [640, 700, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512, 700],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.lukhamhan.siraxuth.xyz',
+        hostname: '**', // อนุญาตทุกโดเมน
+      },
+      {
+        protocol: 'http',
+        hostname: '**', // เผื่อใช้ HTTP ด้วย
       },
     ],
   },
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', '@radix-ui/themes'],
+    optimizeCss: false,
+    scrollRestoration: true,
+    optimizePackageImports: ['framer-motion'],
   },
-  serverExternalPackages: ['bcrypt'],
+  reactStrictMode: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

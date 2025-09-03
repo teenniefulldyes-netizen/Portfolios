@@ -62,6 +62,24 @@ const skillsData: Skill[] = [
     color: '#009ae1', 
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' 
   },
+  { 
+    name: 'JavaScript', 
+    level: 80, 
+    color: '#009ae1', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' 
+  },
+  { 
+    name: 'HTML5', 
+    level: 80, 
+    color: '#009ae1', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' 
+  },
+  { 
+    name: 'CSS3', 
+    level: 80, 
+    color: '#009ae1', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' 
+  },
 ];
 
 const SkillsSection = () => {
@@ -159,7 +177,7 @@ const SkillsSection = () => {
           </div>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-blue-500 mx-auto rounded-full mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300 text-xl max-w-2xl mx-auto">
-            แสดงความเชี่ยวชาญทางเทคนิคและความชำนาญในเทคโนโลยีเว็บสมัยใหม่หลากหลายประเภท
+            Possesses strong technical expertise and hands-on proficiency in diverse modern web technologies.
           </p>
         </motion.div>
 
@@ -237,7 +255,7 @@ const SkillsSection = () => {
                         >
                           {selectedSkill.name}
                         </motion.h3>
-                        <p className="text-gray-600 dark:text-gray-400">ระดับความเชี่ยวชาญ</p>
+                        <p className="text-gray-600 dark:text-gray-400">Level of expertise</p>
                       </div>
                     </div>
 
@@ -253,9 +271,9 @@ const SkillsSection = () => {
                     </div>
 
                     <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                      <span>มือใหม่</span>
-                      <span>ปานกลาง</span>
-                      <span>เชี่ยวชาญ</span>
+                        <span>Beginner</span>
+                        <span>medium</span>
+                        <span>Expert</span>
                     </div>
 
                     <motion.p 
@@ -356,17 +374,17 @@ const SkillsSection = () => {
                       className="w-6 h-6" 
                     />
                   </div>
-                  ทักษะ {modalSkill.name}
+                  skills {modalSkill.name}
                 </DialogTitle>
                 <DialogDescription>
-                  รายละเอียดความเชี่ยวชาญและความชำนาญทางเทคนิค
+                  Details of expertise and technical expertise
                 </DialogDescription>
               </DialogHeader>
               
               <div className="space-y-6 py-4">
                 <div className="space-y-2">
                   <div className="flex justify-between items-end">
-                    <span className="font-medium">ระดับความเชี่ยวชาญ</span>
+                    <span className="font-medium">Level of expertise</span>
                     <span className="text-sm font-medium" style={{ color: modalSkill.color }}>
                       {modalSkill.level}%
                     </span>
@@ -381,14 +399,14 @@ const SkillsSection = () => {
                     ></motion.div>
                   </div>
                   <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 px-1">
-                    <span>มือใหม่</span>
-                    <span>ปานกลาง</span>
-                    <span>เชี่ยวชาญ</span>
+                    <span>Beginner</span>
+                    <span>medium</span>
+                    <span>Expert</span>
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <h4 className="font-semibold">ทักษะและประสบการณ์</h4>
+                  <h4 className="font-semibold">Skills and experience</h4>
                   <p className="text-gray-700 dark:text-gray-300">
                     {getSkillDescription(modalSkill.name)}
                   </p>
@@ -420,16 +438,21 @@ const SkillsSection = () => {
 // ฟังก์ชันช่วยสำหรับรายละเอียดทักษะ
 function getSkillDescription(skillName: string): string {
   const descriptions: Record<string, string> = {
-    'React': 'มีความรู้พื้นฐานในด้านการใช้ component และการใช้ state และ props ในการสร้างหน้าต่างต่างๆ',
-    'TypeScript': 'มีความรู้พื้นฐานในด้านการใช้ TypeScript ในการสร้างแอปพลิเคชันที่มีประสิทธิภาพ  และการกำหนด Type, interface และการใช้งานกับ React',
-    'Next.js': 'มีพื้นฐานเกี่ยวกับคุณสมบัติของ Next.js รวมถึง SSR, SSG, ISR, API routes, middleware และ App Router สามารถปรับแต่งเพื่อเพิ่มประสิทธิภาพและ SEO',
-    'TailwindCSS': 'ถนัด utility-first CSS ด้วย Tailwind สามารถสร้างระบบการออกแบบที่กำหนดเอง, แอนิเมชันและเลย์เอาต์ที่ตอบสนองได้อย่างมีประสิทธิภาพ',
-    'Node.js': 'มีพื้นฐานเล็กน้อยในการใช้ Node.js ในการเขียนเว็บไซต์และระบบบอทต่างๆ',
-    'Python': 'การใช้งาน Python รวมถึงการสร้างโมดูลสำหรับการดึงข้อมูลที่มีประสิทธิภาพ และใช้ในการเขียนระบบบอทต่างๆ',
+    'React': 'Basic knowledge of using components, state, and props to build various UI elements.',
+    'TypeScript': 'Basic understanding of TypeScript for building efficient applications, including defining types, interfaces, and using it with React.',
+    'Next.js': 'Fundamentals of Next.js features such as SSR, SSG, ISR, API routes, middleware, and the App Router, with ability to optimize performance and SEO.',
+    'TailwindCSS': 'Proficient in utility-first CSS with Tailwind, capable of creating custom design systems, animations, and responsive layouts effectively.',
+    'Node.js': 'Basic experience with Node.js for building websites and various bot systems.',
+    'Python': 'Experience with Python for creating efficient data-fetching modules and writing bot systems.',
+    'JavaScript': 'Basic knowledge of JavaScript including DOM manipulation, event handling, functions, and integration with frameworks.',
+    'HTML5': 'Understanding of HTML5 for building web structure, using semantic tags, and handling forms, media, and canvas.',
+    'CSS3': 'Ability to use CSS3 for styling web pages, utilizing Flexbox, Grid, Animations, and Responsive Design.'
   };
 
-  return descriptions[skillName] || 'มีความเชี่ยวชาญในการใช้เทคโนโลยีนี้เพื่อสร้างเว็บแอปพลิเคชันที่แข็งแกร่งและขยายขนาดได้';
+  return descriptions[skillName] || 'Proficient in using this technology to build robust and scalable web applications.';
 }
+
+
 
 // ฟังก์ชันช่วยสำหรับโครงการที่เกี่ยวข้องกับทักษะ
 function getSkillProjects(skillName: string): string[] {

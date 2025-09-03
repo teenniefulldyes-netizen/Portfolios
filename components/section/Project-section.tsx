@@ -49,9 +49,9 @@ const projectsData: Project[] = [
     {
         id: 'project-1',
         title: 'Coming Soon | GP-Tech',
-        description: 'โปรเจกต์นี้กำลังอยู่ในระหว่างการพัฒนา',
-        fullDescription: 'โปรเจกต์นี้กำลังอยู่ในระหว่างการพัฒนาและจะมีการอัปเดตในเร็ว ๆ นี้',
-        imageUrl: 'https://www.lukhamhan.siraxuth.xyz/img_bg/bg_lukhamhan.png',
+        description: 'Participated in the United Nations Forum, contributing to discussions and representing key perspectives on global issues.',
+        fullDescription: 'Participated in the United Nations Forum, contributing to discussions and representing key perspectives on global issues.',
+        imageUrl: '/performance/project_01.jpg',
         technologies: [
             { name: 'React', color: '#61DAFB' },
             { name: 'Next.js', color: '#ffffff' },
@@ -62,7 +62,194 @@ const projectsData: Project[] = [
         demoUrl: '',
         repoUrl: '',
         featured: true
-    }
+    },
+    {
+        id: 'project-2',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Developed an innovative face recognition system for school use, enhancing security and efficiency.',
+        fullDescription: 'Developed an innovative face recognition system for school use, enhancing security and efficiency.',
+        imageUrl: '/performance/project_02.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-3',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Participated in a stage dance performance at ACN Showcase 2024.',
+        fullDescription: 'Participated in a stage dance performance at ACN Showcase 2024.',
+        imageUrl: '/performance/project_03.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-4',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Be a candidate of a student council',
+        fullDescription: 'Be a candidate of a student council',
+        imageUrl: '/performance/project_04.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-5',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Undertook a 2-month internship in Japan, enhancing professional skills and cross-cultural experience.',
+        fullDescription: 'Undertook a 2-month internship in Japan, enhancing professional skills and cross-cultural experience.',
+        imageUrl: '/performance/project_05.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-6',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Participated in cosplay event at Universal Studios Japan, Osaka.',
+        fullDescription: 'Participated in cosplay event at Universal Studios Japan, Osaka.',
+        imageUrl: '/performance/project_06.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-7',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Participated in Aice Warp, showcased team UFO’s project, and won 1st place.',
+        fullDescription: 'Participated in Aice Warp, showcased team UFO’s project, and won 1st place.',
+        imageUrl: '/performance/project_07.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-8',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Built significant relationships with foreign schools, promoting academic and cultural collaboration.',
+        fullDescription: 'Built significant relationships with foreign schools, promoting academic and cultural collaboration.',
+        imageUrl: '/performance/project_08.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-9',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Designed and developed games on the Roblox platform, demonstrating creativity and programming skills.',
+        fullDescription: 'Designed and developed games on the Roblox platform, demonstrating creativity and programming skills.',
+        imageUrl: '/performance/project_09.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-10',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Organized and managed a booth selling goods at Maruya event.',
+        fullDescription: 'Organized and managed a booth selling goods at Maruya event.',
+        imageUrl: '/performance/project_10.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-11',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Served as a fitness trainer at a gym, offering professional training and guidance while managing a part-time position.',
+        fullDescription: 'Served as a fitness trainer at a gym, offering professional training and guidance while managing a part-time position.',
+        imageUrl: '/performance/project_11.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
+    {
+        id: 'project-12',
+        title: 'Coming Soon | GP-Tech',
+        description: 'Participated in K Engineering workshops to enhance technical skills.',
+        fullDescription: 'Participated in K Engineering workshops to enhance technical skills.',
+        imageUrl: '/performance/project_12.jpg',
+        technologies: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'Next.js', color: '#ffffff' },
+            { name: 'TypeScript', color: '#3178C6' },
+            { name: 'TailwindCSS', color: '#38B2AC' },
+            // { name: 'GraphQL', color: '#E10098' }
+        ],
+        demoUrl: '',
+        repoUrl: '',
+        featured: true
+    },
 ];
 
 const ProjectSection = () => {
@@ -187,7 +374,7 @@ const ProjectSection = () => {
                         
                         <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-2xl opacity-70"></div>
                         <h2 className="relative text-6xl md:text-7xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 drop-shadow-2xl">
-                            Featured Projects
+                            performance
                         </h2>
                     </div>
                     
@@ -204,9 +391,8 @@ const ProjectSection = () => {
                         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        ผลงานโปรเจกต์ต่าง ๆ ของผม
                         <span className="block text-lg text-gray-500 dark:text-gray-400 mt-2 font-light">
-                            สร้างสรรค์ด้วยความตั้งใจและเทคโนโลยีล้ำสมัย
+                            Engaged in various creative activities and projects aimed at enhancing learning and developing essential skills.
                         </span>
                     </motion.p>
                 </motion.div>
@@ -247,13 +433,13 @@ const ProjectSection = () => {
                                             className="object-cover rounded-lg"
                                         />
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-2 line-clamp-2">
+                                    {/* <h3 className="text-xl font-semibold mb-2 line-clamp-2">
                                         {project.title}
-                                    </h3>
+                                    </h3> */}
                                     <p className="text-gray-600 dark:text-gray-300 line-clamp-3">
                                         {project.description}
                                     </p>
-                                    <div className="flex flex-wrap gap-2 mt-3 mb-1">
+                                    {/* <div className="flex flex-wrap gap-2 mt-3 mb-1">
                                         {project.technologies.slice(0, 3).map((tech) => (
                                             <Badge
                                                 key={`${project.id}-${tech.name}`}
@@ -276,7 +462,7 @@ const ProjectSection = () => {
                                                 +{project.technologies.length - 3}
                                             </Badge>
                                         )}
-                                    </div>
+                                    </div> */}
                                 <div className="flex items-center text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors cursor-pointer">
                                     ดูเพิ่มเติม
                                     <ChevronRight className="w-4 h-4 ml-2" />
@@ -290,7 +476,7 @@ const ProjectSection = () => {
                 </div>
 
                 {/* Enhanced Show More/Less Button */}
-                {projectsData.length > 3 && (
+                {/* {projectsData.length > 3 && (
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
@@ -313,7 +499,7 @@ const ProjectSection = () => {
                             </Button>
                         </motion.div>
                     </motion.div>
-                )}
+                )} */}
             </div>
 
             {/* Enhanced Project Detail Modal */}
@@ -328,14 +514,14 @@ const ProjectSection = () => {
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <DialogHeader className="space-y-4">
+                                {/* <DialogHeader className="space-y-4">
                                     <DialogTitle className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                                         {selectedProject.title}
                                     </DialogTitle>
                                     <DialogDescription className="text-xl text-gray-600 dark:text-gray-300">
                                         {selectedProject.description}
                                     </DialogDescription>
-                                </DialogHeader>
+                                </DialogHeader> */}
 
                                 {/* Enhanced Project Image */}
                                 <motion.div 
@@ -353,7 +539,7 @@ const ProjectSection = () => {
                                 </motion.div>
 
                                 {/* Enhanced Technologies */}
-                                <motion.div 
+                                {/* <motion.div 
                                     className="flex flex-wrap gap-3 mb-6"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
@@ -380,7 +566,7 @@ const ProjectSection = () => {
                                             </Badge>
                                         </motion.div>
                                     ))}
-                                </motion.div>
+                                </motion.div> */}
 
                                 {/* Enhanced Full Description */}
                                 <motion.div 
