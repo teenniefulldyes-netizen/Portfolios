@@ -112,11 +112,13 @@ export function AboutSection() {
   ], []);
   const HobbyList = useMemo(() => [
   "Chess",
-  "practice coding skills",
-  "Find and learn things I don’t know",
-  "Disassemble stuff that I don’t use",
-  "Sports and body weight training",
-  "Drawing"
+  "Pratice coding skills",
+  "Exploring new knowledge",
+  "Play card games",
+  "Sports",
+  "body weight training",
+  "Drawing",
+  "Editing"
 
   ], []);
 
