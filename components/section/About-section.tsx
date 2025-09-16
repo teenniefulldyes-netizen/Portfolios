@@ -118,7 +118,8 @@ export function AboutSection() {
   "Sports",
   "body weight training",
   "Drawing",
-  "Editing"
+  "Editing",
+  "Music(Piano,Harmonica,Guitar)"
 
   ], []);
 
