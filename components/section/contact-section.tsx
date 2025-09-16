@@ -240,7 +240,7 @@ export function Footer() {
           {/* Logo/Brand */}
           <div className="mb-6 md:mb-0">
             <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-600">
-              x2Stiftz
+              CMKL UNIVERSITY ໒꒰ྀི• ˕ •꒱ྀི১
             </div>
           </div>
 
