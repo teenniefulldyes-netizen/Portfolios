@@ -471,7 +471,7 @@ export function Hero() {
                     <TypeAnimation
                       sequence={[
                         'Ai engineering', 3000,
-                        'Business Ai', 3000,
+                        'EntreprenuershipAI', 3000,
                         
                         // 'Problem Solver', 3000,
                       ]}
