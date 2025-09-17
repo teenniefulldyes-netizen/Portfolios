@@ -518,7 +518,7 @@ export function Hero() {
                 )}
               </TypedTextContainer> */}
               <p>
-                "Not everyone who makes an effort is rewarded. However! Everyone who has succeeded has undoubtedly made an effort!!!
+                Not everyone who makes an effort is rewarded. However! Everyone who has succeeded has undoubtedly made an effort!!!
               </p>
             </motion.div>
             <motion.div
