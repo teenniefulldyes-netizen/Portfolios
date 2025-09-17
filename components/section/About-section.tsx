@@ -224,7 +224,7 @@ export function AboutSection() {
                         <>
                           <BorderBeam
                             duration={8} // Slower for better performance
-                            size={80}
+                            size={100}
                             className="from-transparent via-red-500 to-transparent"
                           />
                           <BorderBeam
