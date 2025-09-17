@@ -58,7 +58,7 @@ const skillsData: Skill[] = [
   },
   { 
     name: 'Python', 
-    level: 80, 
+    level: 60, 
     color: '#009ae1', 
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' 
   },
