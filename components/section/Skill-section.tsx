@@ -80,6 +80,12 @@ const skillsData: Skill[] = [
     color: '#009ae1', 
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' 
   },
+  {
+    name: 'Lua',
+    level: 92,
+    color: '#5D4AD3',
+    icon:  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg'
+  },
 ];
 
 const SkillsSection = () => {
