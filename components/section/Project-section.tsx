@@ -151,8 +151,8 @@ const projectsData: Project[] = [
     {
         id: 'project-7',
         title: 'Coming Soon | GP-Tech',
-        description: 'Participated in Aice Warp, showcased team UFO’s project, and won 1st place.',
-        fullDescription: 'Participated in Aice Warp, showcased team UFO’s project, and won 1st place.',
+        description: 'Participated in Aice Warp, showcased team UFO’s project.',
+        fullDescription: 'Participated in Aice Warp, showcased team UFO’s project.',
         imageUrl: '/performance/project_07.jpg',
         technologies: [
             { name: 'React', color: '#61DAFB' },
