@@ -86,6 +86,18 @@ const skillsData: Skill[] = [
     color: '#5D4AD3',
     icon:  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg'
   },
+ {
+    name: 'Three.js',
+    level: 70,
+    color: '#3F9BF2',
+    icon:  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg'
+  },
+ {
+    name: 'SQL',
+    level: 60,
+    color: '#3F9BF2',
+    icon:  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg'
+  },
 ];
 
 const SkillsSection = () => {
