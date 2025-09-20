@@ -68,7 +68,7 @@ export function ContactSection() {
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/Xexatoth",
+      url: "https://github.com/teenniefulldyes-netizen",
       color: "from-gray-800 to-gray-600",
     },
     {
