@@ -195,7 +195,7 @@ const SkillsSection = () => {
           </div>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-blue-500 mx-auto rounded-full mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300 text-xl max-w-2xl mx-auto">
-            Possesses strong technical expertise and hands-on proficiency in diverse modern web technologies.
+           Language / THAI / ENG / JAPANESE
           </p>
         </motion.div>
 
