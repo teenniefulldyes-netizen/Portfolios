@@ -238,7 +238,7 @@ export function AboutSection() {
                     </Card>
                     <Card className="bg-background/70 backdrop-blur-sm p-3 md:p-4 rounded-lg border border-blue-500/10">
                       <p className="text-xs md:text-sm text-muted-foreground mb-1">Age:</p>
-                      <p className="text-lg md:text-2xl font-bold">17 years old</p>
+                      <p className="text-lg md:text-2xl font-bold">18 years old already yay</p>
                       {!shouldReduceMotion && (
                         <>
                           <BorderBeam
