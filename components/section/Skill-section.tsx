@@ -98,6 +98,12 @@ const skillsData: Skill[] = [
     color: '#3F9BF2',
     icon:  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg'
   },
+{
+    name: 'C',
+    level: 40,
+    color: '#3F9BF2',
+    icon:  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg'
+  },
 ];
 
 const SkillsSection = () => {
